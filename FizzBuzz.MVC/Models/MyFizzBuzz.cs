@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace FizzBuzz.MVC.Models
 {
@@ -6,6 +7,9 @@ namespace FizzBuzz.MVC.Models
     {
         public List<string> GetFizzBuzz(int value)
         {
+            if(value < 1 ||value > 1000)
+                throw new ArgumentException("Value should be greater than Zero and less than 1001");
+
             var numbers = new List<string>();
 
             for (var i = 1; i <= value; i++)

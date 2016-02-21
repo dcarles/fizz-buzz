@@ -20,10 +20,16 @@ namespace FizzBuzz.MVC.Controllers
         public ActionResult FizzBuzz(FizzBuzzViewModel model)
         {
 
-            var fizzBuzz = new MyFizzBuzz();
-           model.FizzBuzzNumbers = fizzBuzz.GetFizzBuzz(model.UserPosition);
+            if (ModelState.IsValid)
+            {
 
-            return View(model);
+                var fizzBuzz = new MyFizzBuzz();
+                model.FizzBuzzNumbers = fizzBuzz.GetFizzBuzz(model.UserPosition);
+
+                return View(model);
+            }
+            else
+                return View("Index", model);
         }
     }
 }

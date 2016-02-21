@@ -100,6 +100,33 @@ namespace FizzBuzz.Tests
 
         }
 
+
+        [Test]
+        public void GetFizzBuzz_Should_Return_Exception_If_Input_Is_Less_Than_One()
+        {
+            // Arrange
+            var fizbuzz = new MyFizzBuzz();
+
+            // Act
+            // Assert
+            Assert.Throws<ArgumentException>(() => fizbuzz.GetFizzBuzz(0));
+
+        }
+
+        [Test]
+        public void GetFizzBuzz_Should_Return_Exception_If_Input_Is_Greater_Than_Thousand()
+        {
+            // Arrange
+            var fizbuzz = new MyFizzBuzz();
+
+            // Act
+            // Assert
+            Assert.Throws<ArgumentException>(() => fizbuzz.GetFizzBuzz(1001));
+
+        }
+
+
+
     }
 
    
