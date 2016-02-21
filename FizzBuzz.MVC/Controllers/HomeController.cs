@@ -23,7 +23,7 @@ namespace FizzBuzz.MVC.Controllers
             if (ModelState.IsValid)
             {
 
-                var fizzBuzz = new MyFizzBuzz();
+                var fizzBuzz = new MyFizzBuzz(() => DateTime.UtcNow);
                 model.FizzBuzzNumbers = fizzBuzz.GetFizzBuzz(model.UserPosition);
 
                 return View(model);
