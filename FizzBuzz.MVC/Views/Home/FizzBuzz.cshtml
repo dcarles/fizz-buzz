@@ -1,4 +1,5 @@
 ﻿@model FizzBuzz.MVC.Models.FizzBuzzViewModel
+@using PagedList.Mvc;
 @{
     ViewBag.Title = "FizzBuzz";
 }
@@ -26,4 +27,8 @@
     </div>
 
 </div>
+<br />
+Page @(Model.FizzBuzzNumbers.PageCount < Model.FizzBuzzNumbers.PageNumber ? 0 : Model.FizzBuzzNumbers.PageNumber) of @Model.FizzBuzzNumbers.PageCount
 
+@Html.PagedListPager(Model.FizzBuzzNumbers, page => Url.Action("FizzBuzz",
+    new { value = @Model.UserPosition, page }))
