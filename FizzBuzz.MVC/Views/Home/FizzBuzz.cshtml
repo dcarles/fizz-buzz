@@ -12,8 +12,15 @@
 
         @foreach (var number in Model.FizzBuzzNumbers)
         {
-            <span>@number</span>
-            <br/>
+            if (number == "FizzBuzz")
+            {
+                <span class="fizz">Fizz</span><span class="buzz">Buzz</span>
+            }
+            else
+            {
+                <span class="@number.ToLower()"> @number</span>
+            }
+            <br />
         }
 
     </div>
