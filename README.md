@@ -34,6 +34,7 @@ Also, check in your code after every step, and label it ‘Step 1’, ‘Step 2�
 * Decided to do simple injection of DateTime.Now as a func instead of complicating with a time class that you can mock later as I dont think is needed for this simple project. Unit testing could be done better to avoid repetition
 
 5 - Amend the program so only 20 values are displayed at a time. Implement ‘Next’ and ‘Previous’ buttons to display the remaining values.
+
 * Used PagedList.MVC to implement this functionality
 
 6 - A RESTful web service is required  to record the user entered values.Design and document this web service. Implement it as a mock or stub in your code. 
