@@ -12,14 +12,18 @@ namespace FizzBuzz.MVC.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            return View();
+            return View(new FizzBuzzViewModel());
         }
 
 
         [HttpPost]
-        public ActionResult Index(FizzBuzzViewModel model)
+        public ActionResult FizzBuzz(FizzBuzzViewModel model)
         {
-            return View();
+
+            var fizzBuzz = new MyFizzBuzz();
+           model.FizzBuzzNumbers = fizzBuzz.GetFizzBuzz(model.UserPosition);
+
+            return View(model);
         }
     }
 }

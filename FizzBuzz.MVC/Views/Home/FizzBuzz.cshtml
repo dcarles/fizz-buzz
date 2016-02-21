@@ -3,5 +3,20 @@
     ViewBag.Title = "FizzBuzz";
 }
 
-<h2>View</h2>
+<div class="jumbotron">
+    <h1>FizzBuzz</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+
+        @foreach (var number in Model.FizzBuzzNumbers)
+        {
+            <span>@number</span>
+            <br/>
+        }
+
+    </div>
+
+</div>
 

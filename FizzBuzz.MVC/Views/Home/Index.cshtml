@@ -7,9 +7,14 @@
     <h1>FizzBuzz</h1>
 </div>
 
-<div class="row">
-    <div class="col-md-4 col-md-offset-4">
-       @Html.TextBoxFor(m=> m.UserPosition)
+<form action="/Home/FizzBuzz" method="POST">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            @Html.TextBoxFor(m => m.UserPosition)
+        </div>
+    </div>
+    <div class="row">
+        <input type="submit" class="btn btn-default" value="Get FizzBuzz" />
     </div>
     
-</div>
+</form>
